@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "s3" {
+resource "aws_s3_bucket" "s3" { # aws_s3_bucket.cors_rule.allowed_methods is not configured in file jchalmers-oak9-Terraform-Samples/terraform-sample/s3/main.tf on line: 1
   bucket = "my-tf-remediation-bucket"
   acl    = "private"
 
@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "s3" {
     rule {
       apply_server_side_encryption_by_default {
         kms_master_key_id = "arn:{redacted}"
-        sse_algorithm     = "AES128"
+        sse_algorithm     = "aws:kms"
       }
     }
   }

@@ -1,7 +1,6 @@
 resource "aws_s3_bucket" "s3" {
   # oak9: AccessControl is not configured
   # oak9: PublicAccessBlockConfiguration is not configured
-  # oak9: PublicAccessBlockConfiguration is not configured
   # oak9: BucketEncryption is not configured
   # oak9: aws_s3_bucket.server_side_encryption_configuration is not configured
   # oak9: CorsConfiguration.CorsRules.AllowedMethods is not configured

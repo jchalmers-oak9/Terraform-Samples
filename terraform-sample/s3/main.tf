@@ -1,4 +1,6 @@
 resource "aws_s3_bucket" "s3" {
+  # oak9: CorsConfiguration.CorsRules.AllowedMethods is not configured
+  # oak9: CorsConfiguration.CorsRules.AllowedMethods should be set to any of GET,HEAD,POST
   # oak9: aws_s3_bucket_public_access_block is not configured
   bucket = "my-tf-remediation-bucket"
   acl    = "private"

@@ -21,7 +21,7 @@ resource "aws_elb" "bar" {
 
   listener {
     instance_port      = 8000
-    instance_protocol  = "http"
+    instance_protocol  = "http" # oak9: listener.instance_protocol should be set to any of SSL,HTTPS
     lb_port            = 443
     lb_protocol        = "https"
     ssl_certificate_id = "arn:aws:iam::123456789012:server-certificate/certName"

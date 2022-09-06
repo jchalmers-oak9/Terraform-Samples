@@ -8,6 +8,7 @@ provider "aws" {
 
 resource "aws_elb" "web" {
   name = "terraform-example-elb"
+  # oak9: elastic_load_balancing.load_balancer.load_balancer_name is not configured
 
   # The same availability zone as our instances
   availability_zones = aws_instance.web.*.availability_zone

@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "bar" {
+  # oak9: elastic_load_balancing.load_balancer.connection_draining_policy does not specify a connection draining policy
   # oak9: aws_elb.instances is not configured
   # oak9: elastic_load_balancing.load_balancer.access_logging_policy is not configured to write load balancer access logs to S3
   name               = "foobar-terraform-elb"

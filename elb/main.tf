@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__subnet.subnet_network_acl_association.network_acl_id does not reference Network ACL
   required_version = ">= 0.12"
 }
 

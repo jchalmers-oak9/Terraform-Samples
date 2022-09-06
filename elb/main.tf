@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__subnet.subnet.map_public_ip_on_launch is not configured
   # oak9: e_c2__subnet.subnet.assign_ipv6_address_on_creation is not configured
   # oak9: e_c2__subnet.subnet.availability_zone is not configured
   # oak9: e_c2__instance.instance.kernel_id is not configured

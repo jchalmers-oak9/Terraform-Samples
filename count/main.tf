@@ -7,6 +7,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: elastic_load_balancing.load_balancer.listeners[0].load_balancer_port is not configured
   # oak9: elastic_load_balancing.load_balancer.listeners[0].policy_names is not configured
   # oak9: elastic_load_balancing.load_balancer.app_cookie_stickiness_policy does not specify the application-controlled sticky session policy for the load balancer
   # oak9: elastic_load_balancing.load_balancer.connection_settings is not configured

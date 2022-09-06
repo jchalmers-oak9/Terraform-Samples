@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "bar" {
+  # oak9: elastic_load_balancing.load_balancer.access_logging_policy is not configured to write load balancer access logs to S3
   name               = "foobar-terraform-elb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 

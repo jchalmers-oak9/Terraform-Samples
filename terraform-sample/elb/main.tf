@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "bar" {
+  # oak9: aws_elb.instances is not configured
   name               = "foobar-terraform-elb"
   # oak9: elastic_load_balancing.load_balancer.load_balancer_name is not configured
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]

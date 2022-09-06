@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__subnet.subnet_network_acl_association.subnet_id is not configured
   # oak9: e_c2__security_group.security_group.tags is not configured
   # oak9: e_c2__instance.instance.availability_zone is not set
   required_version = ">= 0.12"

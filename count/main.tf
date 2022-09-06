@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__instance.instance.key_name does not have the name of its Key Pair set
   # oak9: e_c2__instance.instance.iam_instance_profile does not have IAM Profile name set
   required_version = ">= 0.12"
 }

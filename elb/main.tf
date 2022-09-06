@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__v_p_c.vpc.instance_tenancy is not configured
   # oak9: e_c2__subnet.subnet_cidr_block.subnet_id is not configured
   # oak9: e_c2__subnet.subnet_cidr_block.ipv6_cidr_block is not configured
   # oak9: e_c2__subnet.subnet.map_public_ip_on_launch is not configured

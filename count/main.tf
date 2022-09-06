@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__instance.instance.image_id is not configured
   required_version = ">= 0.12"
 }
 

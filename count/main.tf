@@ -1,4 +1,5 @@
 terraform {
+  # oak9: e_c2__instance.instance.availability_zone is not set
   # oak9: e_c2__instance.instance.tags is not configured
   required_version = ">= 0.12"
 }

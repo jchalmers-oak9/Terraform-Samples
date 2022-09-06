@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "bar" {
+  # oak9: aws_elb.security_groups is not configured
   # oak9: aws_elb.subnets is not configured
   # oak9: elastic_load_balancing.load_balancer.connection_draining_policy does not specify a connection draining policy
   # oak9: aws_elb.instances is not configured

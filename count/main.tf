@@ -7,6 +7,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: elastic_load_balancing.load_balancer.connection_draining_policy does not specify a connection draining policy
   # oak9: elastic_load_balancing.load_balancer.access_logging_policy is not configured to write load balancer access logs to S3
   name = "terraform-example-elb"
   # oak9: elastic_load_balancing.load_balancer.load_balancer_name is not configured

@@ -7,6 +7,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: elastic_load_balancing.load_balancer.listeners[0].load_balancer_port is not configured
   # oak9: elastic_load_balancing.load_balancer.listeners[0].policy_names is not configured
   # oak9: elastic_load_balancing.load_balancer.connection_draining_policy does not specify a connection draining policy
   # oak9: elastic_load_balancing.load_balancer.health_check is not configured

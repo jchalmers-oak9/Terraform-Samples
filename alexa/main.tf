@@ -17,7 +17,7 @@ resource "aws_lambda_function" "default" {
   function_name    = "terraform_lambda_alexa_example"
   role             = aws_iam_role.default.arn
   handler          = "lambda_function.lambda_handler"
-  runtime          = "python2.7"
+  runtime          = "python2.7" # oak9: aws_lambda_function.runtime should be set to any of dotnetcore3.1, dotnet6, go1.x, java11, java8, java8.al2, nodejs10.x, nodejs12.x, nodejs14.x, provided.al2, python3.7, python3.8, ruby2.7
 }
 
 #This resource is the core take away of this example.

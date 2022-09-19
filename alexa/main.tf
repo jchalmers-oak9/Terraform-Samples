@@ -12,6 +12,7 @@ provider "aws" {
 # }
 
 resource "aws_lambda_function" "default" {
+  # oak9: aws_lambda_function.kms_key_arn is not set to use customer managed keys for encryption
   filename         = "lambda_function.zip"
   source_code_hash = filebase64sha256("lambda_function.zip")
   function_name    = "terraform_lambda_alexa_example"

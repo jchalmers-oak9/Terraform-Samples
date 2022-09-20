@@ -81,6 +81,7 @@ resource "random_integer" "bucket_suffix" {
 }
 
 resource "aws_s3_bucket" "foo" {
+  # oak9: aws_s3_bucket_versioning.versioning_configuration.status bucket versioning is not enabled
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
   # oak9: aws_s3_bucket.logging.target_bucket is not configured
   acl           = "private"

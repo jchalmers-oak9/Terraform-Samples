@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "s3" {
+resource "aws_s3_bucket" "s3" { # oak9:  should be set to any of private, authenticateread, logdeliverywrite, bucketownerread, bucketownerfullcontrol, awsexecread
   # oak9: s3.bucket.cors_configuration.cors_rules is not configured
   bucket = "my-tf-remediation-bucket"
   acl    = "private"

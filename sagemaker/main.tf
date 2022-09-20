@@ -82,6 +82,7 @@ resource "random_integer" "bucket_suffix" {
 
 resource "aws_s3_bucket" "foo" {
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
+  # oak9: aws_s3_bucket.logging.target_bucket is not configured
   acl           = "private"
   force_destroy = true
 }

@@ -21,6 +21,7 @@ resource "aws_elb" "web" {
 
   # The instances are registered automatically
   instances = aws_instance.web.*.id
+  # oak9: aws_elb.instances is not configured
 }
 
 data "aws_ami" "ubuntu" {

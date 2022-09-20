@@ -12,6 +12,7 @@ provider "aws" {
 # }
 
 resource "aws_lambda_function" "default" {
+  # oak9: aws_lambda_function.memory_size is not configured
   # oak9: lambda.function.code.zip_file is not configured
   # oak9: aws_lambda_function.s3_bucket is not configured
   # oak9: lambda.function.code.image_uri is not configured

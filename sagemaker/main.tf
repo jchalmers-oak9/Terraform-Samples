@@ -81,6 +81,7 @@ resource "random_integer" "bucket_suffix" {
 }
 
 resource "aws_s3_bucket" "foo" {
+  # oak9: Using keys that are not managed properly enables risk of compromise
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
   acl           = "private"
   force_destroy = true

@@ -11,6 +11,7 @@ resource "aws_elb" "web" {
 
   # The same availability zone as our instances
   availability_zones = aws_instance.web.*.availability_zone
+  # oak9: aws_elb.availability_zones does not specify availability zones
 
   listener {
     instance_port     = 80

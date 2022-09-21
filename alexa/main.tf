@@ -12,6 +12,7 @@ provider "aws" {
 # }
 
 resource "aws_lambda_function" "default" {
+  # oak9: lambda.function.vpc_config is not configured
   # oak9: lambda.function.reserved_concurrent_executions is not configured
   # oak9: aws_lambda_function.kms_key_arn is not set to use customer managed keys for encryption
   filename         = "lambda_function.zip"

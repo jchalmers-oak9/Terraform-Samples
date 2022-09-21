@@ -81,6 +81,7 @@ resource "random_integer" "bucket_suffix" {
 }
 
 resource "aws_s3_bucket" "foo" {
+  # oak9: s3.bucket.cors_configuration.cors_rules is not configured
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
   acl           = "private"
   force_destroy = true

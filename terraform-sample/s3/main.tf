@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "s3" {
   bucket = "my-tf-remediation-bucket"
-  acl    = "private"
+  acl    = "private" # oak9: acl should be set to any of publicread, publicreadwrite, authenticateread
 
   tags = {
     Name        = "My bucket"

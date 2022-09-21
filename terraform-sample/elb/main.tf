@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "bar" {
+  # oak9: aws_elb.security_groups is not configured
   # oak9: aws_elb.instances is not configured
   # oak9: elastic_load_balancing.load_balancer.app_cookie_stickiness_policy does not specify a duration based stickiness policy for cookies
   # oak9: elastic_load_balancing.load_balancer.app_cookie_stickiness_policy does not specify the application-controlled sticky session policy for the load balancer

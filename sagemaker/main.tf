@@ -82,7 +82,7 @@ resource "random_integer" "bucket_suffix" {
 
 resource "aws_s3_bucket" "foo" {
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
-  acl           = "private"
+  acl           = "private" # oak9: acl should be set to any of private, authenticateread, logdeliverywrite, bucketownerread, bucketownerfullcontrol, awsexecread
   force_destroy = true
 }
 

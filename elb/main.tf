@@ -113,6 +113,7 @@ resource "aws_security_group" "elb" {
 
 resource "aws_elb" "web" {
   name = "example-elb"
+  # oak9: elastic_load_balancing.load_balancer.load_balancer_name is not configured
   # oak9: elastic_load_balancing.load_balancer.lb_cookie_stickiness_policy[0].policy_name is not configured
 
   # The same availability zone as our instance

@@ -1,0 +1,26 @@
+name: 'oak9 Github Action'
+description: 'oak9 Github Action'
+environment: production
+inputs:
+  organizationId:
+    description: 'Organization ID'
+    required: true
+  projectId: # id of project
+    description: 'Project ID'
+    required: true
+  maximumSeverity:
+    description: 'Maximum severity'
+    required: true
+    default: 'critical'
+  logDesignGaps:
+    description: 'A boolean flag that notes if design gaps should be displayed in GitHub Workflow console'
+    default: false
+  pollingTimeoutSeconds:
+    description: 'Time in seconds to wait for an oak9 validation to complete before failing'
+    default: 30
+runs:
+  using: 'node16'
+  main: 'index.js'
+branding:
+  icon: 'shield'
+  color: 'gray-dark'

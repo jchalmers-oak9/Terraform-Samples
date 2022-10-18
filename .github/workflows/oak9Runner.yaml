@@ -1,0 +1,25 @@
+name: Run oak9 Analysis
+on: 
+  push:
+    branches:
+      - devtest-*
+jobs:
+  oac9-iac-scan:
+    runs-on: ubuntu-latest
+    name: oak9-action
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: oak9 GitHub Action
+        uses: ./dist
+        env:
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OAK9_API_TOKEN: ${{ secrets.DEV_OAK9_API_TOKEN }}
+          OAK9_API_URL: 'https://devapi.oak9.cloud/integrations'
+        with:
+          organizationId: 'jchalmerse79b5f20f'
+          projectId: 'proj-jchalmerse79b5f20f-86'
+          maximumSeverity: 'High'
+          logDesignGaps: true
+          pollingTimeoutSeconds: 30

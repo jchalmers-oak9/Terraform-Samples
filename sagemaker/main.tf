@@ -80,7 +80,7 @@ resource "random_integer" "bucket_suffix" {
   max = 99999
 }
 
-resource "aws_s3_bucket" "foo" {
+resource "aws_s3_bucket" "foo" { # oak9:  should be set to any of private, authenticateread, logdeliverywrite, bucketownerread, bucketownerfullcontrol, awsexecread
   # oak9: aws_s3_bucket_cors_configuration.cors_rule is not configured
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
   acl           = "private"

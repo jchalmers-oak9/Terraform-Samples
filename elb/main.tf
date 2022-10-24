@@ -112,6 +112,7 @@ resource "aws_security_group" "elb" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: elastic_load_balancing.load_balancer.connection_settings is not configured
   # oak9: aws_elb.listener.ssl_certificate_id is not configured
   # oak9: elastic_load_balancing.load_balancer.scheme is not configured
   # oak9: elastic_load_balancing.load_balancer.policies is not configured

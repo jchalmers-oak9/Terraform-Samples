@@ -16,6 +16,7 @@ resource "aws_lambda_function" "default" {
   source_code_hash = filebase64sha256("lambda_function.zip")
   function_name    = "terraform_lambda_alexa_example"
   role             = aws_iam_role.default.arn
+  # oak9: aws_lambda_function.role does not have a properly defined lambda role that allows publishing logs to CloudWatch
   handler          = "lambda_function.lambda_handler"
   runtime          = "python2.7" # oak9: runtime should be set to any of dotnetcore3.1, dotnet5.0, dotnet6, go1.x, java11, java8, java8.al2, nodejs12.x, nodejs14.x, nodejs16.x, provided, provided.al2, python3.7, python3.8, python3.9, ruby2.7
 }

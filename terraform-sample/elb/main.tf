@@ -24,6 +24,7 @@ resource "aws_elb" "bar" {
     instance_protocol  = "http"
     lb_port            = 443
     lb_protocol        = "https"
+    # oak9: aws_elb.listener.lb_protocol is not configured
     ssl_certificate_id = "arn:aws:iam::123456789012:server-certificate/certName"
   }
 

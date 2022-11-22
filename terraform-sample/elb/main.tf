@@ -22,6 +22,7 @@ resource "aws_elb" "bar" {
   listener {
     instance_port      = 8000
     instance_protocol  = "http"
+    # oak9: aws_elb.listener.instance_protocol is not configured
     lb_port            = 443
     lb_protocol        = "https"
     # oak9: aws_elb.listener.lb_protocol is not configured

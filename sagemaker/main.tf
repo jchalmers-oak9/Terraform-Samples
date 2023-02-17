@@ -81,6 +81,7 @@ resource "random_integer" "bucket_suffix" {
 }
 
 resource "aws_s3_bucket" "foo" {
+  # oak9: Define Tags for S3 bucket
   bucket        = "terraform-sagemaker-example-${random_integer.bucket_suffix.result}"
   acl           = "private"
   force_destroy = true

@@ -12,6 +12,7 @@ provider "aws" {
 # }
 
 resource "aws_lambda_function" "default" {
+  # oak9: Manage key used to encrypt Lambda environment variables
   # oak9: Configure Dead Letter Queue for application resiliency
   filename         = "lambda_function.zip"
   source_code_hash = filebase64sha256("lambda_function.zip")

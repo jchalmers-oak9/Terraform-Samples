@@ -3,6 +3,7 @@ resource "aws_s3_bucket" "s3" {
   acl    = "private"
 
   tags = {
+    # oak9: Define Tags for S3 bucket
     Name        = "My bucket"
     Environment = "Dev"
   }

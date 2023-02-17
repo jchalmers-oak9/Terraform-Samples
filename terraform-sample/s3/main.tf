@@ -1,4 +1,5 @@
 resource "aws_s3_bucket" "s3" {
+  # oak9: Use s3.bucket.public_access_block_configuration to control S3 bucket public access instead of Canned Access Control Lists (ACLs)
   bucket = "my-tf-remediation-bucket"
   acl    = "private"
 

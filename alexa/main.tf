@@ -12,6 +12,7 @@ provider "aws" {
 # }
 
 resource "aws_lambda_function" "default" {
+  # oak9: Configure concurrency options to gain finer control over Function Scaling
   # oak9: Manage key used to encrypt Lambda environment variables
   # oak9: Configure Dead Letter Queue for application resiliency
   filename         = "lambda_function.zip"

@@ -112,6 +112,7 @@ resource "aws_security_group" "elb" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: Define asset inventory tags for your ELB
   # oak9: Design your ELB to tolerate zone failures
   name = "example-elb"
 

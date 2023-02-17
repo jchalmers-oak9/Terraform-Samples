@@ -117,6 +117,6 @@ resource "aws_directory_service_directory" "example" {
   }
 }
 
-resource "aws_kms_key" "example" {
+resource "aws_kms_key" "example" { # oak9:  should be set to any of sign_verify, encrypt_decrypt
   description = "WorkSpaces example key"
 }

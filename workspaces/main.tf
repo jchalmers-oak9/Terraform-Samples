@@ -118,5 +118,6 @@ resource "aws_directory_service_directory" "example" {
 }
 
 resource "aws_kms_key" "example" {
+  # oak9: Key policy is not defined.
   description = "WorkSpaces example key"
 }

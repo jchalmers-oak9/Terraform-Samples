@@ -112,6 +112,10 @@ resource "aws_security_group" "elb" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: elastic_load_balancing.load_balancer.app_cookie_stickiness_policy does not specify a duration based stickiness policy for cookies
+  # oak9: elastic_load_balancing.load_balancer.app_cookie_stickiness_policy does not specify the application-controlled sticky session policy for the load balancer
+  # oak9: aws_elb.listener.ssl_certificate_id is not configured
+  # oak9: Enable connection draining for ELB
   name = "example-elb"
 
   # The same availability zone as our instance

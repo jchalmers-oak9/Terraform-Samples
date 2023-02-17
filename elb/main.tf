@@ -112,6 +112,7 @@ resource "aws_security_group" "elb" {
 }
 
 resource "aws_elb" "web" {
+  # oak9: aws_elb.listener.ssl_certificate_id is not configured
   # oak9: Enable connection draining for ELB
   name = "example-elb"
 

@@ -12,6 +12,10 @@ provider "aws" {
 # }
 
 resource "aws_lambda_function" "default" {
+  # oak9: Define a VPC Configuration for greater network access control
+  # oak9: Configure concurrency options to gain finer control over Function Scaling
+  # oak9: Manage key used to encrypt Lambda environment variables
+  # oak9: Configure Dead Letter Queue for application resiliency
   filename         = "lambda_function.zip"
   source_code_hash = filebase64sha256("lambda_function.zip")
   function_name    = "terraform_lambda_alexa_example"

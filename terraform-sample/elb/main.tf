@@ -3,6 +3,7 @@ provider "aws" {
 }
 
 resource "aws_elb" "bar" {
+  # oak9: Define a security group for ELB
   name               = "foobar-terraform-elb"
   availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
 
